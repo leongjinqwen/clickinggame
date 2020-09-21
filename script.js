@@ -6,6 +6,19 @@ const randomX = () => {
     return left+'px'
 }
 
+const randomColor = () => {
+    const r = Math.floor(Math.random()*255);
+    const g = Math.floor(Math.random()*255);
+    const b = Math.floor(Math.random()*255);
+    return 'rgb(' + r + ',' + g +',' + b + ')'
+}
+const randomSpeed = () => {
+    const speed = Math.floor(Math.random()*6);
+    if (speed<3){
+        return 2500
+    }
+    return Number(speed+'000')
+}
 const createCircle = () => {
     let newCircle = document.createElement('div')
     $(newCircle).addClass('circle')
